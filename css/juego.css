@@ -1,8 +1,8 @@
 /* Variables Globales: Definimos colores y valores que usaremos en todo el diseño */
 :root {
       --bg:        #000000; /* Color de fondo oscuro */
-      --surface:   #1a1828; /* Color de superficie para modales y cartas */
-      --card-back: #252338; /* Color del reverso de la carta */
+      --surface:   #000000; /* Color de superficie para modales y cartas */
+      --card-back: #282922; /* Color del reverso de la carta */
       --accent:    #f6c90e; /* Color de acento (amarillo) para resaltar elementos */
       --found:     #2ecc71; /* Verde para indicar que se encontró un par */
       --danger:    #ff6b6b; /* Rojo para advertencias (como el timer agotándose) */
