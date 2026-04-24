@@ -8,43 +8,64 @@
 /* BASE */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0f172a;
+  background: radial-gradient(circle at top, #0f172a, #020617);
   color: #e5e7eb;
   overflow-x: hidden;
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* NAVBAR PREMIUM */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 18px;
-  padding: 16px;
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(12px);
+  gap: 14px;
+  padding: 14px 20px;
+  background: rgba(2, 6, 23, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   z-index: 999;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
+/* BOTONES NAV PREMIUM */
 nav button {
-  background: transparent;
+  background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
   border: 1px solid rgba(255,255,255,0.12);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
+  color: #e5e7eb;
+  padding: 10px 18px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
   font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* brillo hover */
+nav button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: 0.5s;
+}
+
+nav button:hover::before {
+  left: 100%;
 }
 
 nav button:hover {
-  background: #facc15;
+  background: linear-gradient(135deg, #facc15, #fbbf24);
   color: #000;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(250,204,21,0.3);
+  box-shadow: 0 10px 30px rgba(250,204,21,0.25);
 }
 
 /* SECCIONES */
@@ -53,62 +74,61 @@ section {
   width: 100%;
 }
 
-/* PARALLAX */
+/* PARALLAX MEJORADO */
 .parallax {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  transform: translateZ(0);
 }
 
-/* OVERLAY */
+/* OVERLAY MÁS CINEMÁTICO */
 .parallax::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.6),
-    rgba(0,0,0,0.75)
-  );
+  background: radial-gradient(circle at center, rgba(0,0,0,0.55), rgba(0,0,0,0.85));
   z-index: 1;
 }
 
-/* CONTENIDO */
+/* CONTENIDO GLASS PREMIUM */
 .parallax-texto {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 50px 60px;
-  max-width: 750px;
+  padding: 55px 65px;
+  max-width: 760px;
 
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 18px;
 
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.65);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* FONDOS MUCHO MÁS PRO */
+/* FONDOS MÁS PREMIUM */
 #inicio {
-  background-image: url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=1600");
+  background-image: url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=1800");
 }
 
 #segunda {
-  background-image: url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=1600");
+  background-image: url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=1800");
 }
 
-/* TEXTO */
+/* TIPOGRAFÍA */
 .parallax-texto h1 {
-  font-size: 3.8rem;
+  font-size: 4rem;
   margin-bottom: 12px;
   letter-spacing: -1px;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
 .parallax-texto p {
@@ -116,44 +136,45 @@ section {
   font-size: 1.1rem;
 }
 
-/* BOTONES */
+/* BOTÓN PRINCIPAL PREMIUM */
 .boton-nav {
   margin-top: 25px;
-  padding: 12px 28px;
+  padding: 12px 30px;
   background: linear-gradient(135deg, #facc15, #fde047);
   color: #000;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.3s;
   font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(250,204,21,0.25);
 }
 
 .boton-nav:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(250,204,21,0.4);
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 15px 40px rgba(250,204,21,0.35);
 }
 
 /* SECCIONES NORMALES */
 .seccion-contenido {
   padding: 140px 20px;
   text-align: center;
-  background: linear-gradient(180deg, #111827, #0f172a);
+  background: linear-gradient(180deg, #0b1220, #020617);
 }
 
 .seccion-contenido h2 {
-  font-size: 2.7rem;
+  font-size: 2.8rem;
   margin-bottom: 20px;
 }
 
 .seccion-contenido p {
   max-width: 650px;
   margin: auto;
-  opacity: 0.85;
+  opacity: 0.8;
   font-size: 1.05rem;
 }
 
-/* CARDS */
+/* CARDS MÁS ELEGANTES */
 .cards {
   display: flex;
   justify-content: center;
@@ -163,23 +184,25 @@ section {
 }
 
 .card {
-  background: linear-gradient(145deg, #1f2937, #111827);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
   padding: 30px;
-  border-radius: 14px;
+  border-radius: 16px;
   transition: 0.35s;
   min-width: 170px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
 .card:hover {
   background: #facc15;
   color: #000;
-  transform: translateY(-8px) scale(1.05);
+  transform: translateY(-10px) scale(1.05);
 }
 
 /* SECCIÓN CON IMAGEN */
 .scroll {
-  background-image: url("https://images.unsplash.com/photo-1546484959-f2f5c7c1c6c0?w=1600");
+  background-image: url("https://images.unsplash.com/photo-1546484959-f2f5c7c1c6c0?w=1800");
   background-size: cover;
   background-position: center;
 }
@@ -188,7 +211,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0,0,0,0.7);
 }
 
 .scroll * {
@@ -198,7 +221,7 @@ section {
 
 /* TECLAS */
 .tecla {
-  background: linear-gradient(135deg, #fff, #ddd);
+  background: linear-gradient(135deg, #fff, #d1d5db);
   color: #000;
   padding: 4px 10px;
   border-radius: 6px;
@@ -216,11 +239,7 @@ section {
   }
 
   .parallax-texto h1 {
-    font-size: 2.3rem;
-  }
-
-  .seccion-contenido {
-    padding: 100px 20px;
+    font-size: 2.4rem;
   }
 
   nav {
