@@ -1,14 +1,3 @@
-// =============================================================================
-  // 1. DEFINICIÓN DE DATOS (MODELO)
-  //    Un "Array" es una lista. Aquí guardamos 8 objetos, donde cada uno 
-  //    representa un producto con su ID, nombre, precio e imagen.
-  // =============================================================================
-
-  // =============================================================================
-  // 2. ESTADO DEL JUEGO (VARIABLES GLOBALES)
-  //    Estas variables guardan la información de lo que está pasando en el juego
-  //    en un momento dado.
-  // =============================================================================
   var carta1           = null;  // Guarda el elemento HTML de la primera carta clickeada
   var carta2           = null;  // Guarda el elemento HTML de la segunda carta clickeada
   var id1              = null;  // ID del producto de la primera carta
