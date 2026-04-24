@@ -8,7 +8,7 @@
 /* BASE */
 body {
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top, #0f172a, #020617);
+  background: radial-gradient(circle at top, #000000, #000000);
   color: #e5e7eb;
   overflow-x: hidden;
   line-height: 1.6;
@@ -23,7 +23,7 @@ nav {
   justify-content: center;
   gap: 14px;
   padding: 14px 20px;
-  background: rgba(2, 6, 23, 0.55);
+  background: rgb(0, 0, 0);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   z-index: 999;
