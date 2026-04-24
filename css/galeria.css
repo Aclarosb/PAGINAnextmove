@@ -9,7 +9,7 @@
 :root {
   --color-fondo: #000000;
   --color-fondo-sec: #000000;
-  --color-superficie: rgba(0,0,0,0.65);
+  --color-superficie: rgb(0, 0, 0);
   --color-texto: #ffffff;
   --color-secundario: #cccccc;
   --color-acento: #f0c040;
@@ -32,7 +32,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  background: rgba(15,15,25,0.75);
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(14px);
   padding: 14px 40px;
   display: flex;
