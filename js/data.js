@@ -79,13 +79,4 @@ let productos = [
     enStock: true
   },
 
-  {
-    id: 9,
-    nombre: "Zapatos de senderismo resistentes",
-    descripcion: "Calzado cómodo y duradero, diseñado para caminatas en montaña y terrenos irregulares.",
-    precio: 140000,
-    imagen: "https://i.postimg.cc/QCKbLJbM/curry_1.webp",
-    descuento: 0.15,
-    enStock: true
-  }
 ]
