@@ -9,6 +9,8 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #222;
   background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ── NAVBAR ── */
@@ -16,20 +18,22 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 15, 25, 0.75);
+  backdrop-filter: blur(14px);
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding: 15px;
+  padding: 14px 20px;
   z-index: 100;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 nav a {
-  color: white;
+  color: #eaeaea;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -39,10 +43,10 @@ nav a::after {
   position: absolute;
   width: 0%;
   height: 2px;
-  bottom: -5px;
+  bottom: -6px;
   left: 0;
-  background: #f0c040;
-  transition: 0.3s;
+  background: linear-gradient(90deg, #f0c040, #ffdd70);
+  transition: 0.3s ease;
 }
 
 nav a:hover::after {
@@ -58,22 +62,23 @@ nav button {
   padding: 10px 24px;
   background: linear-gradient(135deg, #f0c040, #ffdd70);
   color: #222;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 nav button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(240,192,64,0.5);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(240,192,64,0.5);
 }
 
 /* ── SECCIONES NORMALES ── */
 .seccion-contenido {
-  padding: 100px 40px;
-  background: linear-gradient(135deg, #ffffff, #f1f1f1);
+  padding: 110px 30px;
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
   text-align: center;
   min-height: 60vh;
   display: flex;
@@ -81,17 +86,19 @@ nav button:hover {
   justify-content: center;
   align-items: center;
   gap: 25px;
+  border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .seccion-contenido h2 {
-  font-size: 2.4rem;
-  color: #222;
+  font-size: 2.6rem;
+  color: #111;
+  letter-spacing: -0.5px;
 }
 
 .seccion-contenido p {
   max-width: 650px;
   color: #555;
-  line-height: 1.8;
+  line-height: 1.9;
   font-size: 1.05rem;
 }
 
@@ -102,6 +109,14 @@ nav button:hover {
   background-position: center;
   background-attachment: scroll;
   color: white;
+  position: relative;
+}
+
+.scroll::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
 }
 
 /* Botón */
@@ -110,17 +125,18 @@ nav button:hover {
   background: linear-gradient(135deg, #333, #555);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .boton-nav:hover {
-  background: #f0c040;
+  background: linear-gradient(135deg, #f0c040, #ffdd70);
   color: #222;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
 /* ── PARALLAX ── */
@@ -141,12 +157,15 @@ nav button:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.45);
+  background: linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.65)
+  );
   top: 0;
   left: 0;
 }
 
-/* Imágenes más atractivas */
+/* Imágenes */
 #inicio {
   background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600');
 }
@@ -158,31 +177,33 @@ nav button:hover {
 /* Texto encima */
 .parallax-texto {
   position: relative;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 50px 70px;
-  border-radius: 16px;
+  padding: 55px 75px;
+  border-radius: 18px;
   text-align: center;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
   animation: fadeIn 1.2s ease;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .parallax-texto h1 {
-  font-size: 3.2rem;
-  margin-bottom: 10px;
+  font-size: 3.4rem;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
 }
 
 .parallax-texto p {
-  font-size: 1.3rem;
-  opacity: 0.9;
+  font-size: 1.25rem;
+  opacity: 0.85;
 }
 
 /* Animación */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -193,8 +214,8 @@ nav button:hover {
 /* Hint teclado */
 .hint-teclado {
   margin-top: 20px;
-  font-size: 0.85rem;
-  opacity: 0.7;
+  font-size: 0.8rem;
+  opacity: 0.6;
 }
 
 .tecla {
@@ -204,5 +225,20 @@ nav button:hover {
   border-radius: 6px;
   padding: 4px 10px;
   font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .parallax-texto {
+    padding: 30px;
+  }
+
+  .parallax-texto h1 {
+    font-size: 2.2rem;
+  }
+
+  .seccion-contenido h2 {
+    font-size: 2rem;
+  }
 }
